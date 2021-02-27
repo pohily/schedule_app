@@ -1,0 +1,615 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE3ADB9825EA895800F8A702 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3ADB9725EA895800F8A702 /* AppDelegate.swift */; };
+		CE3ADB9A25EA895800F8A702 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3ADB9925EA895800F8A702 /* SceneDelegate.swift */; };
+		CE3ADB9C25EA895800F8A702 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3ADB9B25EA895800F8A702 /* ViewController.swift */; };
+		CE3ADB9F25EA895800F8A702 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE3ADB9D25EA895800F8A702 /* Main.storyboard */; };
+		CE3ADBA225EA895800F8A702 /* TrnsportApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE3ADBA025EA895800F8A702 /* TrnsportApp.xcdatamodeld */; };
+		CE3ADBA425EA895900F8A702 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE3ADBA325EA895900F8A702 /* Assets.xcassets */; };
+		CE3ADBA725EA895900F8A702 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE3ADBA525EA895900F8A702 /* LaunchScreen.storyboard */; };
+		CE3ADBB225EA895900F8A702 /* TrnsportAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3ADBB125EA895900F8A702 /* TrnsportAppTests.swift */; };
+		CE3ADBBD25EA895900F8A702 /* TrnsportAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3ADBBC25EA895900F8A702 /* TrnsportAppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE3ADBAE25EA895900F8A702 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE3ADB8C25EA895800F8A702 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE3ADB9325EA895800F8A702;
+			remoteInfo = TrnsportApp;
+		};
+		CE3ADBB925EA895900F8A702 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE3ADB8C25EA895800F8A702 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE3ADB9325EA895800F8A702;
+			remoteInfo = TrnsportApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CE3ADB9425EA895800F8A702 /* TrnsportApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrnsportApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE3ADB9725EA895800F8A702 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CE3ADB9925EA895800F8A702 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CE3ADB9B25EA895800F8A702 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE3ADB9E25EA895800F8A702 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CE3ADBA125EA895800F8A702 /* TrnsportApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TrnsportApp.xcdatamodel; sourceTree = "<group>"; };
+		CE3ADBA325EA895900F8A702 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE3ADBA625EA895900F8A702 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CE3ADBA825EA895900F8A702 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE3ADBAD25EA895900F8A702 /* TrnsportAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrnsportAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE3ADBB125EA895900F8A702 /* TrnsportAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrnsportAppTests.swift; sourceTree = "<group>"; };
+		CE3ADBB325EA895900F8A702 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE3ADBB825EA895900F8A702 /* TrnsportAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrnsportAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE3ADBBC25EA895900F8A702 /* TrnsportAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrnsportAppUITests.swift; sourceTree = "<group>"; };
+		CE3ADBBE25EA895900F8A702 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE3ADB9125EA895800F8A702 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE3ADBAA25EA895900F8A702 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE3ADBB525EA895900F8A702 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE3ADB8B25EA895800F8A702 = {
+			isa = PBXGroup;
+			children = (
+				CE3ADB9625EA895800F8A702 /* TrnsportApp */,
+				CE3ADBB025EA895900F8A702 /* TrnsportAppTests */,
+				CE3ADBBB25EA895900F8A702 /* TrnsportAppUITests */,
+				CE3ADB9525EA895800F8A702 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CE3ADB9525EA895800F8A702 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE3ADB9425EA895800F8A702 /* TrnsportApp.app */,
+				CE3ADBAD25EA895900F8A702 /* TrnsportAppTests.xctest */,
+				CE3ADBB825EA895900F8A702 /* TrnsportAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE3ADB9625EA895800F8A702 /* TrnsportApp */ = {
+			isa = PBXGroup;
+			children = (
+				CE3ADB9725EA895800F8A702 /* AppDelegate.swift */,
+				CE3ADB9925EA895800F8A702 /* SceneDelegate.swift */,
+				CE3ADB9B25EA895800F8A702 /* ViewController.swift */,
+				CE3ADB9D25EA895800F8A702 /* Main.storyboard */,
+				CE3ADBA325EA895900F8A702 /* Assets.xcassets */,
+				CE3ADBA525EA895900F8A702 /* LaunchScreen.storyboard */,
+				CE3ADBA825EA895900F8A702 /* Info.plist */,
+				CE3ADBA025EA895800F8A702 /* TrnsportApp.xcdatamodeld */,
+			);
+			path = TrnsportApp;
+			sourceTree = "<group>";
+		};
+		CE3ADBB025EA895900F8A702 /* TrnsportAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				CE3ADBB125EA895900F8A702 /* TrnsportAppTests.swift */,
+				CE3ADBB325EA895900F8A702 /* Info.plist */,
+			);
+			path = TrnsportAppTests;
+			sourceTree = "<group>";
+		};
+		CE3ADBBB25EA895900F8A702 /* TrnsportAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CE3ADBBC25EA895900F8A702 /* TrnsportAppUITests.swift */,
+				CE3ADBBE25EA895900F8A702 /* Info.plist */,
+			);
+			path = TrnsportAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE3ADB9325EA895800F8A702 /* TrnsportApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE3ADBC125EA895900F8A702 /* Build configuration list for PBXNativeTarget "TrnsportApp" */;
+			buildPhases = (
+				CE3ADB9025EA895800F8A702 /* Sources */,
+				CE3ADB9125EA895800F8A702 /* Frameworks */,
+				CE3ADB9225EA895800F8A702 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TrnsportApp;
+			productName = TrnsportApp;
+			productReference = CE3ADB9425EA895800F8A702 /* TrnsportApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CE3ADBAC25EA895900F8A702 /* TrnsportAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE3ADBC425EA895900F8A702 /* Build configuration list for PBXNativeTarget "TrnsportAppTests" */;
+			buildPhases = (
+				CE3ADBA925EA895900F8A702 /* Sources */,
+				CE3ADBAA25EA895900F8A702 /* Frameworks */,
+				CE3ADBAB25EA895900F8A702 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE3ADBAF25EA895900F8A702 /* PBXTargetDependency */,
+			);
+			name = TrnsportAppTests;
+			productName = TrnsportAppTests;
+			productReference = CE3ADBAD25EA895900F8A702 /* TrnsportAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CE3ADBB725EA895900F8A702 /* TrnsportAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE3ADBC725EA895900F8A702 /* Build configuration list for PBXNativeTarget "TrnsportAppUITests" */;
+			buildPhases = (
+				CE3ADBB425EA895900F8A702 /* Sources */,
+				CE3ADBB525EA895900F8A702 /* Frameworks */,
+				CE3ADBB625EA895900F8A702 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE3ADBBA25EA895900F8A702 /* PBXTargetDependency */,
+			);
+			name = TrnsportAppUITests;
+			productName = TrnsportAppUITests;
+			productReference = CE3ADBB825EA895900F8A702 /* TrnsportAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE3ADB8C25EA895800F8A702 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					CE3ADB9325EA895800F8A702 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					CE3ADBAC25EA895900F8A702 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = CE3ADB9325EA895800F8A702;
+					};
+					CE3ADBB725EA895900F8A702 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = CE3ADB9325EA895800F8A702;
+					};
+				};
+			};
+			buildConfigurationList = CE3ADB8F25EA895800F8A702 /* Build configuration list for PBXProject "TrnsportApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE3ADB8B25EA895800F8A702;
+			productRefGroup = CE3ADB9525EA895800F8A702 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE3ADB9325EA895800F8A702 /* TrnsportApp */,
+				CE3ADBAC25EA895900F8A702 /* TrnsportAppTests */,
+				CE3ADBB725EA895900F8A702 /* TrnsportAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE3ADB9225EA895800F8A702 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE3ADBA725EA895900F8A702 /* LaunchScreen.storyboard in Resources */,
+				CE3ADBA425EA895900F8A702 /* Assets.xcassets in Resources */,
+				CE3ADB9F25EA895800F8A702 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE3ADBAB25EA895900F8A702 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE3ADBB625EA895900F8A702 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE3ADB9025EA895800F8A702 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE3ADB9C25EA895800F8A702 /* ViewController.swift in Sources */,
+				CE3ADBA225EA895800F8A702 /* TrnsportApp.xcdatamodeld in Sources */,
+				CE3ADB9825EA895800F8A702 /* AppDelegate.swift in Sources */,
+				CE3ADB9A25EA895800F8A702 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE3ADBA925EA895900F8A702 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE3ADBB225EA895900F8A702 /* TrnsportAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE3ADBB425EA895900F8A702 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE3ADBBD25EA895900F8A702 /* TrnsportAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE3ADBAF25EA895900F8A702 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE3ADB9325EA895800F8A702 /* TrnsportApp */;
+			targetProxy = CE3ADBAE25EA895900F8A702 /* PBXContainerItemProxy */;
+		};
+		CE3ADBBA25EA895900F8A702 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE3ADB9325EA895800F8A702 /* TrnsportApp */;
+			targetProxy = CE3ADBB925EA895900F8A702 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CE3ADB9D25EA895800F8A702 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE3ADB9E25EA895800F8A702 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CE3ADBA525EA895900F8A702 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE3ADBA625EA895900F8A702 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE3ADBBF25EA895900F8A702 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CE3ADBC025EA895900F8A702 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE3ADBC225EA895900F8A702 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9VZ5D2AT4U;
+				INFOPLIST_FILE = TrnsportApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mpohily.TrnsportApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE3ADBC325EA895900F8A702 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9VZ5D2AT4U;
+				INFOPLIST_FILE = TrnsportApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mpohily.TrnsportApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CE3ADBC525EA895900F8A702 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9VZ5D2AT4U;
+				INFOPLIST_FILE = TrnsportAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mpohily.TrnsportAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrnsportApp.app/TrnsportApp";
+			};
+			name = Debug;
+		};
+		CE3ADBC625EA895900F8A702 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9VZ5D2AT4U;
+				INFOPLIST_FILE = TrnsportAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mpohily.TrnsportAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrnsportApp.app/TrnsportApp";
+			};
+			name = Release;
+		};
+		CE3ADBC825EA895900F8A702 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9VZ5D2AT4U;
+				INFOPLIST_FILE = TrnsportAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mpohily.TrnsportAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TrnsportApp;
+			};
+			name = Debug;
+		};
+		CE3ADBC925EA895900F8A702 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9VZ5D2AT4U;
+				INFOPLIST_FILE = TrnsportAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mpohily.TrnsportAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TrnsportApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE3ADB8F25EA895800F8A702 /* Build configuration list for PBXProject "TrnsportApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE3ADBBF25EA895900F8A702 /* Debug */,
+				CE3ADBC025EA895900F8A702 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE3ADBC125EA895900F8A702 /* Build configuration list for PBXNativeTarget "TrnsportApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE3ADBC225EA895900F8A702 /* Debug */,
+				CE3ADBC325EA895900F8A702 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE3ADBC425EA895900F8A702 /* Build configuration list for PBXNativeTarget "TrnsportAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE3ADBC525EA895900F8A702 /* Debug */,
+				CE3ADBC625EA895900F8A702 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE3ADBC725EA895900F8A702 /* Build configuration list for PBXNativeTarget "TrnsportAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE3ADBC825EA895900F8A702 /* Debug */,
+				CE3ADBC925EA895900F8A702 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CE3ADBA025EA895800F8A702 /* TrnsportApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CE3ADBA125EA895800F8A702 /* TrnsportApp.xcdatamodel */,
+			);
+			currentVersion = CE3ADBA125EA895800F8A702 /* TrnsportApp.xcdatamodel */;
+			path = TrnsportApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CE3ADB8C25EA895800F8A702 /* Project object */;
+}
