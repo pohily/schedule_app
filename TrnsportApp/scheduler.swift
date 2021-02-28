@@ -35,6 +35,7 @@ class Scheduler {
                 "bus_babka": "https://yandex.ru/maps/213/moscow/stops/stop__9641561/?ll=37.652162%2C55.871319&z=17.96",
                 "tram": "https://yandex.ru/maps/213/moscow/stops/stop__9642452/?ll=37.652162%2C55.871319&z=17.96",
                 "otradnoe": "https://yandex.ru/maps/213/moscow/stops/stop__9641574/?ll=37.652162%2C55.871319&z=17.96",
+                "altufan": "https://yandex.ru/maps/213/moscow/stops/stop__9641574/?ll=37.652162%2C55.871319&z=17.96",
                 "avt_649": "https://yandex.ru/maps/213/moscow/stops/stop__9711575/?ll=37.652712%2C55.871607&z=18.22",
                 "tram_medvedkovo": "https://yandex.ru/maps/213/moscow/stops/stop__9642473/?ll=37.652712%2C55.871607&z=18"
             ]
@@ -45,7 +46,19 @@ class Scheduler {
         "tram": 5,
         "otradnoe": 4,
         "avt_649": 3,
-        "tram_medvedkovo": 5
+        "tram_medvedkovo": 5,
+        "altufan": 4,
+        "": 0
+    ]
+    
+    let DESTINATION = [
+        "bus_babka": "До Бабушкинской:\n\n",
+        "tram": "До Бабушкинской:\n\n",
+        "otradnoe": "До Отрадного:\n\n",
+        "avt_649": "До Бабушкинской:\n\n",
+        "tram_medvedkovo": "До Медведково:\n\n",
+        "altufan": "До Алтуфьево:\n\n",
+        "": "Пока не едет"
     ]
     
     func on_time(data: (Int, String, String)) -> Bool {
@@ -63,27 +76,39 @@ class Scheduler {
     func print_schedule(data: Array<(Int, String, String)>) -> String {
         // время от остановки до места назначения
         var delay: Int = 0
-        var result = ""
+        var result: Array<(Int, Int, String, String)> = []
         for line in data {
             if on_time(data: line) {
-                if line.1 == "17" && line.2 == "tram_medvedkovo" {
+                if (line.1 == "17" && line.2 == "tram_medvedkovo") {
                     delay = 13
-                } else if line.1 == "17" {
+                } else if (line.1 == "17" && line.2 == "tram") {
                     delay = 4
+                } else if (line.1 == "605" || line.1 == "880") && line.2 == "otradnoe" {
+                    delay = 18
                 } else if line.1 == "649" {
                     delay = 7
-                } else if line.1 == "605" || line.1 == "880" {
-                    delay = 18
+                } else if (line.1 == "928" && line.2 == "altufan") {
+                    delay = 25
                 } else {
-                    delay = 4
+                    delay = 5
                 }
-                result += "\(line.1) будет через \(line.0), до метро - \(delay + line.0)\n"
+                // до метро: 0, через: 1, маршрут: 2, key: 3
+                result.append((line.0 + delay, line.0, line.1, line.2))
             }
         }
-        return result
+        var result_text: String = "Пока не едет"
+        if result.count != 0 {
+            result_text = DESTINATION[result.last!.3]!
+            for line in result.sorted(by: { $0.0 < $1.0 }) {
+                if (line.2 != "Пока не едет" && line.2 != "") {
+                    result_text += "\(line.2) через \(line.1), доедет через - \(line.0)\n"
+                }
+            }
+        }
+        return result_text
     }
     
-    func schedule(key: String, good: Array<String>) -> String {
+    func schedule(key: String, good: Array<String>) -> Array<(Int, String, String)> {
         let url = URLS[key]!
         
         // возвращает для конкретной остановки key массив кортежей: 0: время, 1: маршрут, 2: key
@@ -119,43 +144,55 @@ class Scheduler {
                 result.append((Int(each.0) ?? 0, each.1, key))
             }
         }
-        return self.print_schedule(data: result)
+        if result.count == 0 {
+            return [(0, "", "")]
+        } else {
+            return result
+        }
     }
     
-    func metro() -> String {
-        var result: String = self.avt_649()
-        result += self.tram()
-        result += self.bus_babka()
-        return result
-    }
-
-    func bus_babka() -> String {
+    
+    // MARK - массив
+    func bus_babka() -> Array<(Int, String, String)> {
         let good_to_babka = ["124", "174", "238", "309", "880", "928", "С15"]
         return self.schedule(key: "bus_babka", good: good_to_babka)
     }
 
-    func tram() -> String {
+    func tram() -> Array<(Int, String, String)> {
         let good = ["17"]
         return self.schedule(key: "tram", good: good)
     }
 
-    func avt_649() -> String {
+    func avt_649() -> Array<(Int, String, String)> {
         let good = ["649"]
         return self.schedule(key: "avt_649", good: good)
     }
 
+    // MARK - расписание
+    func metro() -> String {
+        var result: Array<(Int, String, String)> = self.avt_649()
+        result += self.tram()
+        result += self.bus_babka()
+        return self.print_schedule(data: result)
+    }
+    
     func otradnoe() -> String {
         let good_to_otradnoe = ["605", "880"]
-        return self.schedule(key: "otradnoe", good: good_to_otradnoe)
+        return self.print_schedule(data: self.schedule(key: "otradnoe", good: good_to_otradnoe))
     }
 
     func altufan() -> String {
         let good = ["928"]
-        return self.schedule(key: "otradnoe", good: good)
+        return self.print_schedule(data: self.schedule(key: "altufan", good: good))
     }
     
     func tram_medvedkovo() -> String {
         let good = ["17"]
-        return self.schedule(key: "tram_medvedkovo", good: good)
+        return self.print_schedule(data: self.schedule(key: "tram_medvedkovo", good: good))
+    }
+    
+    func tram_ostankino() -> String {
+        let good = ["17"]
+        return self.print_schedule(data: self.schedule(key: "tram", good: good))
     }
 }

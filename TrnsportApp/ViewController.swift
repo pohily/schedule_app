@@ -48,8 +48,8 @@ class ViewController: UIViewController {
     
     @IBAction func actionOstankino(_ sender: Any) {
         let secondVC = storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
-        if scheduler.tram() != "" {
-            secondVC.info = scheduler.tram()
+        if scheduler.tram_ostankino() != "" {
+            secondVC.info = scheduler.tram_ostankino()
         } else {
             secondVC.info = "Пока не едет"
         }
