@@ -16,13 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="60R-M3-MkR">
-                                <rect key="frame" x="32" y="112" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="actionHome:" destination="BYZ-38-t0r" eventType="valueChanged" id="kxm-Ze-LZk"/>
-                                </connections>
-                            </switch>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lgr-i2-Crc">
                                 <rect key="frame" x="32" y="343" width="250" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -74,13 +67,17 @@
                                     <action selector="actionBabka:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0cp-hF-gWY"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Я дома" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGs-hn-YYw">
-                                <rect key="frame" x="100" y="116" width="182" height="22"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6F1-5Z-pxI">
+                                <rect key="frame" x="32" y="115" width="250" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <segments>
+                                    <segment title="Я дома"/>
+                                    <segment title="Я на остановке"/>
+                                </segments>
+                                <connections>
+                                    <action selector="actionHome:" destination="BYZ-38-t0r" eventType="valueChanged" id="fNQ-yM-ZJP"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -92,8 +89,7 @@
                         <outlet property="btnMedvedkovo" destination="Lgr-i2-Crc" id="sYu-j0-E87"/>
                         <outlet property="btnOstankino" destination="yRW-QV-Fv0" id="ISr-aK-uED"/>
                         <outlet property="btnOtradnoe" destination="7pw-ql-5pt" id="Dxn-rn-QDa"/>
-                        <outlet property="labelHome" destination="nGs-hn-YYw" id="hM0-vO-PiA"/>
-                        <outlet property="switchHome" destination="60R-M3-MkR" id="63E-1M-THr"/>
+                        <outlet property="segmentHome" destination="6F1-5Z-pxI" id="RAz-B5-4n1"/>
                         <segue destination="9Bu-hg-jTh" kind="show" id="ws1-D2-mcH"/>
                     </connections>
                 </viewController>

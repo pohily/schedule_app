@@ -8,8 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var switchHome: UISwitch!
-    @IBOutlet weak var labelHome: UILabel!
+    
     @IBOutlet weak var btnBabka: UIButton!
     @IBOutlet weak var btnOstankino: UIButton!
     @IBOutlet weak var btnMedvedkovo: UIButton!
@@ -19,13 +18,15 @@ class ViewController: UIViewController {
     let scheduler = Scheduler()
     
     
-    @IBAction func actionHome(_ sender: Any) {
-        if switchHome.isOn {
-            labelHome.text = "Я дома"
+    @IBOutlet weak var segmentHome: UISegmentedControl!
+    @IBAction func actionHome(_ sender: UISegmentedControl) {
+        switch segmentHome.selectedSegmentIndex {
+        case 0:
             scheduler.home = true
-        } else {
-            labelHome.text = "Я на остановке"
+        case 1:
             scheduler.home = false
+        default:
+            scheduler.home = true
         }
     }
     
