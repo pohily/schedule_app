@@ -32,13 +32,14 @@ class Scheduler {
     var home: Bool = true
         
     let URLS: [String: StaticString] = [
-                "bus_babka": "https://yandex.ru/maps/213/moscow/stops/stop__9641561/?ll=37.652162%2C55.871319&z=17.96",
-                "tram": "https://yandex.ru/maps/213/moscow/stops/stop__9642452/?ll=37.652162%2C55.871319&z=17.96",
-                "otradnoe": "https://yandex.ru/maps/213/moscow/stops/stop__9641574/?ll=37.652162%2C55.871319&z=17.96",
-                "altufan": "https://yandex.ru/maps/213/moscow/stops/stop__9641574/?ll=37.652162%2C55.871319&z=17.96",
-                "avt_649": "https://yandex.ru/maps/213/moscow/stops/stop__9711575/?ll=37.652712%2C55.871607&z=18.22",
-                "tram_medvedkovo": "https://yandex.ru/maps/213/moscow/stops/stop__9642473/?ll=37.652712%2C55.871607&z=18"
-            ]
+        "bus_babka": "https://yandex.ru/maps/213/moscow/stops/stop__9641561/?ll=37.652162%2C55.871319&z=17.96",
+        "tram": "https://yandex.ru/maps/213/moscow/stops/stop__9642452/?ll=37.652162%2C55.871319&z=17.96",
+        "otradnoe": "https://yandex.ru/maps/213/moscow/stops/stop__9641574/?ll=37.652162%2C55.871319&z=17.96",
+        "altufan": "https://yandex.ru/maps/213/moscow/stops/stop__9641574/?ll=37.652162%2C55.871319&z=17.96",
+        "avt_649": "https://yandex.ru/maps/213/moscow/stops/stop__9711575/?ll=37.652712%2C55.871607&z=18.22",
+        "tram_medvedkovo": "https://yandex.ru/maps/213/moscow/stops/stop__9642473/?ll=37.652712%2C55.871607&z=18",
+        "iz_otradnogo": "https://yandex.ru/maps/213/moscow/stops/group__461/?ll=37.607256%2C55.863834&z=18.5"
+    ]
     
     let TIME_DELTAS = [
         // время от квартиры до остановки
@@ -48,6 +49,7 @@ class Scheduler {
         "avt_649": 3,
         "tram_medvedkovo": 5,
         "altufan": 4,
+        "iz_otradnogo": 0,
         "": 0
     ]
     
@@ -58,6 +60,7 @@ class Scheduler {
         "avt_649": "До Бабушкинской:\n\n",
         "tram_medvedkovo": "До Медведково:\n\n",
         "altufan": "До Алтуфьево:\n\n",
+        "iz_otradnogo": "Из Отрадного:\n\n",
         "": "Пока не едет"
     ]
     
@@ -83,7 +86,7 @@ class Scheduler {
                     delay = 13
                 } else if (line.1 == "17" && line.2 == "tram") {
                     delay = 4
-                } else if (line.1 == "605" || line.1 == "880") && line.2 == "otradnoe" {
+                } else if (line.1 == "605" || line.1 == "880") && (line.2 == "otradnoe" || line.2 == "iz_otradnogo") {
                     delay = 18
                 } else if line.1 == "649" {
                     delay = 7
@@ -194,5 +197,10 @@ class Scheduler {
     func tram_ostankino() -> String {
         let good = ["17"]
         return self.print_schedule(data: self.schedule(key: "tram", good: good))
+    }
+    
+    func iz_otradnogo() -> String {
+        let good = ["605", "880"]
+        return self.print_schedule(data: self.schedule(key: "iz_otradnogo", good: good))
     }
 }

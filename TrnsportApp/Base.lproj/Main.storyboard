@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lgr-i2-Crc">
-                                <rect key="frame" x="32" y="343" width="250" height="60"/>
+                                <rect key="frame" x="32" y="270" width="250" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -27,7 +27,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7pw-ql-5pt">
-                                <rect key="frame" x="32" y="411" width="250" height="60"/>
+                                <rect key="frame" x="32" y="330" width="250" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -36,18 +36,8 @@
                                     <action selector="actionOtradnoe:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eb8-yM-yIY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FM6-ww-2C3">
-                                <rect key="frame" x="32" y="479" width="250" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="В Алтуфьево"/>
-                                <connections>
-                                    <action selector="actionAltufan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="URt-F6-fbf"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRW-QV-Fv0">
-                                <rect key="frame" x="32" y="275" width="250" height="60"/>
+                                <rect key="frame" x="32" y="210" width="250" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -57,7 +47,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQk-pd-o2Z">
-                                <rect key="frame" x="32" y="207" width="250" height="60"/>
+                                <rect key="frame" x="32" y="150" width="250" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -68,7 +58,7 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6F1-5Z-pxI">
-                                <rect key="frame" x="32" y="115" width="250" height="32"/>
+                                <rect key="frame" x="32" y="100" width="250" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Я дома"/>
@@ -78,6 +68,26 @@
                                     <action selector="actionHome:" destination="BYZ-38-t0r" eventType="valueChanged" id="fNQ-yM-ZJP"/>
                                 </connections>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZ5-C2-5a0">
+                                <rect key="frame" x="32" y="450" width="250" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Из Отрадного"/>
+                                <connections>
+                                    <action selector="actionIzOtradnogo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JSD-OW-yYo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FM6-ww-2C3">
+                                <rect key="frame" x="32" y="390" width="250" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="В Алтуфьево"/>
+                                <connections>
+                                    <action selector="actionAltufan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="URt-F6-fbf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -86,6 +96,7 @@
                     <connections>
                         <outlet property="btnAltufan" destination="FM6-ww-2C3" id="a2P-rW-kRP"/>
                         <outlet property="btnBabka" destination="xQk-pd-o2Z" id="lMR-uq-XPi"/>
+                        <outlet property="btnIzOtradonogo" destination="tZ5-C2-5a0" id="Pn5-ES-xvE"/>
                         <outlet property="btnMedvedkovo" destination="Lgr-i2-Crc" id="sYu-j0-E87"/>
                         <outlet property="btnOstankino" destination="yRW-QV-Fv0" id="ISr-aK-uED"/>
                         <outlet property="btnOtradnoe" destination="7pw-ql-5pt" id="Dxn-rn-QDa"/>

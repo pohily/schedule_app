@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnMedvedkovo: UIButton!
     @IBOutlet weak var btnOtradnoe: UIButton!
     @IBOutlet weak var btnAltufan: UIButton!
+    @IBOutlet weak var btnIzOtradonogo: UIButton!
     
     let scheduler = Scheduler()
     
@@ -80,6 +81,16 @@ class ViewController: UIViewController {
         let secondVC = storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
         if scheduler.altufan() != "" {
             secondVC.info = scheduler.altufan()
+        } else {
+            secondVC.info = "Пока не едет"
+        }
+        navigationController?.pushViewController(secondVC, animated: true)
+    }
+    
+    @IBAction func actionIzOtradnogo(_ sender: Any) {
+        let secondVC = storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
+        if scheduler.iz_otradnogo() != "" {
+            secondVC.info = scheduler.iz_otradnogo()
         } else {
             secondVC.info = "Пока не едет"
         }
